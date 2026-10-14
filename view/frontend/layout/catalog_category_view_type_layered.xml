@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+    Copyright © 2026 Roman Pasichnyk
+    SPDX-License-Identifier: OSL-3.0 OR AFL-3.0
+
+    The filters' view model for the Zero theme's filter and chip templates,
+    and the price slider's script.
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <script src="Zero_LayeredNavigation::js/price-slider.js" defer="true"/>
+    </head>
+    <body>
+        <referenceBlock name="catalog.navigation.renderer">
+            <arguments>
+                <argument name="zero_filters" xsi:type="object">Zero\LayeredNavigation\ViewModel\Filters</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="catalog.navigation.state">
+            <arguments>
+                <argument name="zero_filters" xsi:type="object">Zero\LayeredNavigation\ViewModel\Filters</argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

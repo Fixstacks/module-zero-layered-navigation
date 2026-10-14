@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+    Copyright © 2026 Roman Pasichnyk
+    SPDX-License-Identifier: OSL-3.0 OR AFL-3.0
+
+    Category and search pages filter with Zero's attribute and price filters.
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="categoryFilterList" type="Magento\Catalog\Model\Layer\FilterList">
+        <arguments>
+            <argument name="filters" xsi:type="array">
+                <item name="attribute" xsi:type="string">Zero\LayeredNavigation\Model\Layer\Filter\Attribute</item>
+                <item name="price" xsi:type="string">Zero\LayeredNavigation\Model\Layer\Filter\Price</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="searchFilterList" type="Magento\Catalog\Model\Layer\FilterList">
+        <arguments>
+            <argument name="filters" xsi:type="array">
+                <item name="attribute" xsi:type="string">Zero\LayeredNavigation\Model\Layer\Filter\Attribute</item>
+                <item name="price" xsi:type="string">Zero\LayeredNavigation\Model\Layer\Filter\Price</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Swatches\Block\LayeredNavigation\RenderLayered">
+        <plugin name="zero_layered_navigation" type="Zero\LayeredNavigation\Plugin\SwatchUrls"/>
+    </type>
+</config>
