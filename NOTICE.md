@@ -1,4 +1,4 @@
-# fixstacks/module-zero-layered-navigation — licensing
+# zerofront/module-zero-layered-navigation — licensing
 
 Copyright © 2026 Roman Pasichnyk.
 
